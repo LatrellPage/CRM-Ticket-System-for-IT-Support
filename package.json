@@ -1,0 +1,14 @@
+{
+  "name": "crm-ticket-system-for-it-support",
+  "version": "1.0.0",
+  "description": "Welcome to the CRM Ticket System for IT Support GitHub repository! This project is designed to streamline and enhance the IT support process by providing a comprehensive Customer Relationship Management (CRM) system tailored specifically for managing and resolving IT support tickets.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^18.2.0"
+  }
+}
