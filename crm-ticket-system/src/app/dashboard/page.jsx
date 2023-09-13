@@ -1,4 +1,4 @@
-"use client"
+'use client'
 import * as React from 'react';
 import { styled, createTheme, ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -18,10 +18,10 @@ import Link from '@mui/material/Link';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import NotificationsIcon from '@mui/icons-material/Notifications';
-import { mainListItems, secondaryListItems } from '@component/ListItems';
-import Chart from '@component/Charts';
-import Deposits from '@component/Deposits';
-import Orders from '@component/Orders';
+import { mainListItems, secondaryListItems } from '../../component/ListItems';
+import Chart from '../../component/Charts';
+import Deposits from '../../component/Deposits';
+import Orders from '../../component/Orders';
 
 function Copyright(props) {
   return (
@@ -81,6 +81,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
     },
   }),
 );
+
 
 export default function Dashboard() {
   const [open, setOpen] = React.useState(true);
