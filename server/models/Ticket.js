@@ -1,39 +1,54 @@
-const mongoose = require('mongoose');
+const { Schema, model } = require('mongoose');
 const Category = require('./Category');
 // const Priority = require('./Priority');
-const User = require('./User');
 
-const ticketSchema = new mongoose.Schema({
-  title: String,
-  content: String,
-  createdAt: Date,
+const ticketSchema = new Schema({
+  title: {
+    type: String,
+    required: true,
+  },
+  content: {
+    type: String,
+    required: true,
+  },
+  createdAt: {
+    type: Date,
+    required: true,
+  },
   // priority: {
-  //   type: mongoose.Schema.Types.ObjectId,
+  //   type: Schema.Types.ObjectId,
   //   ref: Priority, // References the priority of the ticket
   // },
   category: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: Category, // References the category of the ticket
+    type: Schema.Types.ObjectId,
+    ref: Category,
+    required: true,
   },
   user: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: User, // References the owner/user who created the ticket
+    type: Schema.Types.ObjectId,
+    ref: 'User', // References the owner/user who created the ticket
   },
   admin: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: User, // References the admin that is assigned to the ticket
+    type: Schema.Types.ObjectId,
+    ref: 'User', // References the admin that is assigned to the ticket
   },
   status: {
     type: String,
     enum: ['active', 'complete'],
     default: 'active', // Tickets are initially set as active
   },
-});
+},
+{
+  toJSON: {
+    virtuals: true,
+  },
+}
+);
 
 ticketSchema.virtual('assigned').get(function () {
   return this.user != null;
 });
 
-const Ticket = mongoose.model('Ticket', ticketSchema);
+const Ticket = model('Ticket', ticketSchema);
 
 module.exports = Ticket;

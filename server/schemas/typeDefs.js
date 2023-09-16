@@ -1,7 +1,7 @@
 const {gql} = require ('apollo-server-express')
 
 const typeDefs = gql`
-    type User{
+    type User {
         _id:ID!
         name:String!
         email:String!
@@ -27,7 +27,7 @@ const typeDefs = gql`
     }
 
     type Category{
-        name:User!
+        name: String!
     }
 
     enum Roles{
