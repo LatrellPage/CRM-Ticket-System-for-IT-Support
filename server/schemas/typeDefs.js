@@ -1,6 +1,8 @@
 const {gql} = require ('apollo-server-express')
 
 const typeDefs = gql`
+    scalar Date
+
     type User {
         _id:ID!
         name:String!
@@ -60,24 +62,22 @@ const typeDefs = gql`
             content:String!,
             createdAt:Date!,
             category:String!,
-            admin:User!,
+            adminId:ID!,
             status:String!
             ):Ticket
         getTicket(
             ticketId:Int!
             ):Ticket
-        getUserTickets(): [Ticket]!
-        getAllTickets(): [Ticket]!
+        getUserTickets: [Ticket]!
+        getAllTickets: [Ticket]!
         assignTicket(
-            user:User!,
+            userId: ID!,
             ticketId:Int!
         ):Ticket
         deleteTicket(
             ticketId:Int!
-        )
+        ): Boolean!
     }
-
-
 `
 
 module.exports = typeDefs
