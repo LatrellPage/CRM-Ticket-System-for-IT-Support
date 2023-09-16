@@ -1,3 +1,4 @@
 {
-  "/techDashboard/page": "app/techDashboard/page.js"
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/Checkout/page": "app/Checkout/page.js"
 }
