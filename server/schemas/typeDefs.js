@@ -17,7 +17,7 @@ const typeDefs = gql`
     }
 
     type Ticket {
-        ticketId:Int!
+        _id:Int!
         title:String!
         content:String!
         createdAt:Date!
@@ -66,16 +66,16 @@ const typeDefs = gql`
             status:String!
             ):Ticket
         getTicket(
-            ticketId:Int!
+            _id:Int!
             ):Ticket
         getUserTickets: [Ticket]!
         getAllTickets: [Ticket]!
         assignTicket(
             userId: ID!,
-            ticketId:Int!
+            _id:Int!
         ):Ticket
         deleteTicket(
-            ticketId:Int!
+            _id:Int!
         ): Boolean!
     }
 `
