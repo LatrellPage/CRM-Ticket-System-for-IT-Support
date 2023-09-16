@@ -53,8 +53,10 @@ const resolvers = {
       return { token, user };
     },
 
-    createTicket: async (parent, args, { user, body}) => {
-      // TODO: check if admin
+    createTicket: async (parent, args, { user}) => {
+      if (user.role != "admin") {
+        throw new Error("You must be an admin to assign tickets")
+      }
 
       let category = await Category.findOne({where: {'name': args.categoryName}})
 
@@ -64,11 +66,13 @@ const resolvers = {
         })
       }
 
+      const date = new Date()
+
       const ticket = await Ticket.create({
         title: args.title,
         content: args.content,
-        createdAt: '01/01/2023', // TODO
-        admin: user, // TODO: fix
+        createdAt: date,
+        admin: user,
         category: category,
       });
 
