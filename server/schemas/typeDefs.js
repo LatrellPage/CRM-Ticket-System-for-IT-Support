@@ -17,20 +17,21 @@ const typeDefs = gql`
     }
 
     type Ticket {
-        _id:Int!
+        _id:ID!
         title:String!
         content:String!
         createdAt:Date!
-        category:String!
+        category:Category!
         user:User!
         admin:User!
         status:String!
         assigned:Boolean
     }
 
-    type Category{
+    type Category {
         name: String!
     }
+    
 
     enum Roles{
         admin,
@@ -60,22 +61,19 @@ const typeDefs = gql`
         createTicket(
             title:String!,
             content:String!,
-            createdAt:Date!,
-            category:String!,
-            adminId:ID!,
-            status:String!
-            ):Ticket
+            categoryName:String!,
+            ):Ticket!
         getTicket(
-            _id:Int!
-            ):Ticket
+            _id:ID!
+            ):Ticket!
         getUserTickets: [Ticket]!
         getAllTickets: [Ticket]!
         assignTicket(
             userId: ID!,
-            _id:Int!
+            _id:ID!
         ):Ticket
         deleteTicket(
-            _id:Int!
+            _id:ID!
         ): Boolean!
     }
 `

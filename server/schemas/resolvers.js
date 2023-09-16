@@ -1,6 +1,27 @@
-const { User, Ticket } = require ('../models')
+const { User, Ticket, Category } = require ('../models')
 const {AuthenticationError} = require ('apollo-server-express')
 const {signToken} = require ('../utils/auth')
+const { GraphQLScalarType } = require ('graphql')
+const { Kind } = require('graphql/language');
+
+const date = {
+  Date: new GraphQLScalarType({
+      name: 'Date',
+      description: 'Date custom scalar type',
+      parseValue(value) {
+          return new Date(value); // value from the client
+      },
+      serialize(value) {
+          return value.getTime(); // value sent to the client
+      },
+      parseLiteral(ast) {
+          if (ast.kind === Kind.INT) {
+          return parseInt(ast.value, 10); // ast value is always in string format
+          }
+          return null;
+      },
+  })
+};
 
 const resolvers = {
   Query: {
@@ -32,14 +53,30 @@ const resolvers = {
       return { token, user };
     },
 
-    createTicket: async (parent, args) => {
-      const ticket = await Ticket.create(args);
+    createTicket: async (parent, args, { user, body}) => {
+      // TODO: check if admin
 
-      return { ticket };
+      let category = await Category.findOne({where: {'name': args.categoryName}})
+
+      if (category == null) {
+        category = await Category.create({
+          name: args.categoryName
+        })
+      }
+
+      const ticket = await Ticket.create({
+        title: args.title,
+        content: args.content,
+        createdAt: '01/01/2023', // TODO
+        admin: user, // TODO: fix
+        category: category,
+      });
+
+      return ticket;
     },
 
-    getTicket: async (parent, args, { ticket }) => {
-      const getTicket = await Ticket.findOne({ _id: ticket._id });
+    getTicket: async (parent, args, { ticketId }) => {
+      const getTicket = await Ticket.findOne({ _id: ticketId });
 
       return getTicket;
     },
@@ -88,3 +125,5 @@ const resolvers = {
     },
   }
 }
+
+module.exports = resolvers;
