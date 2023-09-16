@@ -66,7 +66,9 @@ const typeDefs = gql`
         getTicket(
             _id:ID!
             ):Ticket!
-        getUserTickets: [Ticket]!
+        getUserTickets(
+            userId: ID!
+        ):[Ticket]!
         getAllTickets: [Ticket]!
         assignTicket(
             userId: ID!,

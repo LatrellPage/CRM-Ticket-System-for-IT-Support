@@ -81,9 +81,9 @@ const resolvers = {
       return getTicket;
     },
 
-    getUserTickets: async (parent, args, { user }) => {
-      const userModel = await User.findOne({ _id: user._id });
-      return userModel.assignedTickets.map(x => x._id)
+    getUserTickets: async (parent, args) => {
+      const userModel = await User.findOne({ _id: args.userId });
+      return userModel.assignedTickets
     },
 
     getAllTickets: async (parent, args, { user }) => {
