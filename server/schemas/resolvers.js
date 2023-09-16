@@ -75,9 +75,12 @@ const resolvers = {
       return ticket;
     },
 
-    getTicket: async (parent, args, { ticketId }) => {
-      const getTicket = await Ticket.findOne({ _id: ticketId });
+    getTicket: async (parent, args) => {
+      const getTicket = await Ticket.findOne({ _id: args._id });
 
+      if (getTicket == null) {
+        throw new Error("Invalid ticket ID")
+      }
       return getTicket;
     },
 
