@@ -1,4 +1,10 @@
 {
   "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/Checkout/page": "app/Checkout/page.js"
+  "/page": "app/page.js",
+  "/Checkout/page": "app/Checkout/page.js",
+  "/signin/page": "app/signin/page.js",
+  "/dashboard/page": "app/dashboard/page.js",
+  "/signup/page": "app/signup/page.js",
+  "/test/page": "app/test/page.js",
+  "/techDashboard/page": "app/techDashboard/page.js"
 }

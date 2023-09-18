@@ -10,43 +10,52 @@ import PeopleIcon from '@mui/icons-material/People';
 import BarChartIcon from '@mui/icons-material/BarChart';
 import LayersIcon from '@mui/icons-material/Layers';
 import AssignmentIcon from '@mui/icons-material/Assignment';
-
+// import { useRouter } from 'next/router;'
 export const mainListItems = (
   <React.Fragment>
-    <ListItemButton>
+    <ListItemButton
+      onClick={()=> {
+        console.log("you clicked me");
+      }}
+    >
       <ListItemIcon>
         <DashboardIcon />
       </ListItemIcon>
       <ListItemText primary="Open Tickets" />
     </ListItemButton>
-    <ListItemButton>
+    <ListItemButton
+      onClick={()=> {
+      }}>
       <ListItemIcon>
         <ShoppingCartIcon />
       </ListItemIcon>
       <ListItemText primary="Closed Tickets" />
     </ListItemButton>
-    <ListItemButton>
+    <ListItemButton
+      onClick={()=> {
+        return (
+        console.log("take me to home page")
+        )
+      }}>
       <ListItemIcon>
         <PeopleIcon />
       </ListItemIcon>
       <ListItemText primary="Account" />
     </ListItemButton>
-  
   </React.Fragment>
 );
-
 export const secondaryListItems = (
   <React.Fragment>
     <ListSubheader component="div" inset>
     Tickets Under Review
     </ListSubheader>
-    <ListItemButton>
+    <ListItemButton disabled>
       <ListItemIcon>
         <AssignmentIcon />
       </ListItemIcon>
       <ListItemText primary="Theo Von" />
     </ListItemButton>
-    <ListItemButton>
+    {/* <ListItemButton>
       <ListItemIcon>
         <AssignmentIcon />
       </ListItemIcon>
@@ -57,6 +66,6 @@ export const secondaryListItems = (
         <AssignmentIcon />
       </ListItemIcon>
       <ListItemText primary="Bert Kreischer" />
-    </ListItemButton>
+    </ListItemButton> */}
   </React.Fragment>
 );

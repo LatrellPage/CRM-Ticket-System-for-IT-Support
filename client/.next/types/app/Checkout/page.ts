@@ -1,4 +1,4 @@
-// File: C:\Users\wicli\bootcamp\CRM-Ticket-System-for-IT-Support\client\src\app\Checkout\page.jsx
+// File: C:\Users\DeaDm\OneDrive\Desktop\UM BootCamp\Project3\CRM\CRM-Ticket-System-for-IT-Support\client\src\app\Checkout\page.jsx
 import * as entry from '../../../../src/app/Checkout/page.js'
 import type { ResolvingMetadata } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

@@ -13,7 +13,7 @@ import Button from '@mui/material/Button';
 import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
 import AddressForm from '../../component/AddressForm';
-import PaymentForm from '../../component/PaymenForm';
+import PaymentForm from '../../component/PaymentForm';
 import Review from '../../component/Review';
 
 function Copyright() {
