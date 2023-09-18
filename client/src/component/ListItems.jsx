@@ -14,7 +14,7 @@ import AssignmentIcon from '@mui/icons-material/Assignment';
 export const mainListItems = (
   <React.Fragment>
     <ListItemButton
-      onClick={()=> {
+      onClick={() => {
         console.log("you clicked me");
       }}
     >
@@ -24,7 +24,7 @@ export const mainListItems = (
       <ListItemText primary="Open Tickets" />
     </ListItemButton>
     <ListItemButton
-      onClick={()=> {
+      onClick={() => {
       }}>
       <ListItemIcon>
         <ShoppingCartIcon />
@@ -32,9 +32,9 @@ export const mainListItems = (
       <ListItemText primary="Closed Tickets" />
     </ListItemButton>
     <ListItemButton
-      onClick={()=> {
+      onClick={() => {
         return (
-        console.log("take me to home page")
+          console.log("take me to home page")
         )
       }}>
       <ListItemIcon>
@@ -47,7 +47,7 @@ export const mainListItems = (
 export const secondaryListItems = (
   <React.Fragment>
     <ListSubheader component="div" inset>
-    Tickets Under Review
+      Tickets Under Review
     </ListSubheader>
     <ListItemButton disabled>
       <ListItemIcon>
