@@ -1,4 +1,4 @@
-// File: /Users/ando/Desktop/bootcamp/Projects/Project 3/Starter code/CRM-Ticket-System-for-IT-Support/client/src/app/layout.js
+// File: C:\Users\wicli\bootcamp\CRM-Ticket-System-for-IT-Support\client\src\app\layout.js
 import * as entry from '../../../src/app/layout.js'
 import type { ResolvingMetadata } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
