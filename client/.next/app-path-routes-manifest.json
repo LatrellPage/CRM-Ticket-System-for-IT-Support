@@ -4,7 +4,7 @@
   "/Checkout/page": "/Checkout",
   "/dashboard/page": "/dashboard",
   "/signin/page": "/signin",
-  "/signup/page": "/signup",
   "/test/page": "/test",
+  "/signup/page": "/signup",
   "/techDashboard/page": "/techDashboard"
 }

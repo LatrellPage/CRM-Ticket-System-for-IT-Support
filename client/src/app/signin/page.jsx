@@ -14,7 +14,7 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import SignUp from '../signup/page';
-import SignIn from '../signup/page';
+import SignIn from '../signin/page';
 
 const Copyright = (props) => {
     return (
@@ -97,16 +97,18 @@ export default function SignInSide() {
                             control={<Checkbox value="remember" color="primary" />}
                             label="Remember me"
                         />
-                        <Button
-                            type="submit"
-                            fullWidth
-                            variant="contained"
-                            sx={{ mt: 3, mb: 2, color: "black" }}
-                        >
-                            Sign In
-                            {/* <Link href="/signin" >
-                            </Link> */}
-                        </Button>
+                        <Link href='/dashboard'>
+                            <Button
+                                type="submit"
+                                fullWidth
+                                variant="contained"
+                                sx={{ mt: 3, mb: 2, color: "black" }}
+                            >
+                                Sign In
+                            
+                            </Button>
+                        </Link>
+                        
                         <Grid container>
                             <Grid item xs>
                                 <Link href="#" variant="body2">
