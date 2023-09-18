@@ -141,9 +141,13 @@ function Deposits() {
 
 
 
+// import { useRouter } from 'next/router;'
 const mainListItems = /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
     children: [
         /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)((_mui_material_ListItemButton__WEBPACK_IMPORTED_MODULE_2___default()), {
+            onClick: ()=>{
+                console.log("you clicked me");
+            },
             children: [
                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((_mui_material_ListItemIcon__WEBPACK_IMPORTED_MODULE_3___default()), {
                     children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_icons_material_Dashboard__WEBPACK_IMPORTED_MODULE_4__/* ["default"] */ .Z, {})
@@ -154,6 +158,7 @@ const mainListItems = /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODUL
             ]
         }),
         /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)((_mui_material_ListItemButton__WEBPACK_IMPORTED_MODULE_2___default()), {
+            onClick: ()=>{},
             children: [
                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((_mui_material_ListItemIcon__WEBPACK_IMPORTED_MODULE_3___default()), {
                     children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_icons_material_ShoppingCart__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .Z, {})
@@ -164,6 +169,9 @@ const mainListItems = /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODUL
             ]
         }),
         /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)((_mui_material_ListItemButton__WEBPACK_IMPORTED_MODULE_2___default()), {
+            onClick: ()=>{
+                return console.log("take me to home page");
+            },
             children: [
                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((_mui_material_ListItemIcon__WEBPACK_IMPORTED_MODULE_3___default()), {
                     children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_icons_material_People__WEBPACK_IMPORTED_MODULE_7__/* ["default"] */ .Z, {})
@@ -183,32 +191,13 @@ const secondaryListItems = /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_
             children: "Tickets Under Review"
         }),
         /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)((_mui_material_ListItemButton__WEBPACK_IMPORTED_MODULE_2___default()), {
+            disabled: true,
             children: [
                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((_mui_material_ListItemIcon__WEBPACK_IMPORTED_MODULE_3___default()), {
                     children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_icons_material_Assignment__WEBPACK_IMPORTED_MODULE_9__/* ["default"] */ .Z, {})
                 }),
                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((_mui_material_ListItemText__WEBPACK_IMPORTED_MODULE_5___default()), {
                     primary: "Theo Von"
-                })
-            ]
-        }),
-        /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)((_mui_material_ListItemButton__WEBPACK_IMPORTED_MODULE_2___default()), {
-            children: [
-                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((_mui_material_ListItemIcon__WEBPACK_IMPORTED_MODULE_3___default()), {
-                    children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_icons_material_Assignment__WEBPACK_IMPORTED_MODULE_9__/* ["default"] */ .Z, {})
-                }),
-                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((_mui_material_ListItemText__WEBPACK_IMPORTED_MODULE_5___default()), {
-                    primary: "Tom Segura"
-                })
-            ]
-        }),
-        /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)((_mui_material_ListItemButton__WEBPACK_IMPORTED_MODULE_2___default()), {
-            children: [
-                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((_mui_material_ListItemIcon__WEBPACK_IMPORTED_MODULE_3___default()), {
-                    children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_icons_material_Assignment__WEBPACK_IMPORTED_MODULE_9__/* ["default"] */ .Z, {})
-                }),
-                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((_mui_material_ListItemText__WEBPACK_IMPORTED_MODULE_5___default()), {
-                    primary: "Bert Kreischer"
                 })
             ]
         })

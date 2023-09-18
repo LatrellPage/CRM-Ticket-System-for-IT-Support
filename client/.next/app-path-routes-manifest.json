@@ -1,9 +1,9 @@
 {
-  "/favicon.ico/route": "/favicon.ico",
   "/page": "/",
+  "/favicon.ico/route": "/favicon.ico",
   "/Checkout/page": "/Checkout",
-  "/signin/page": "/signin",
   "/dashboard/page": "/dashboard",
+  "/signin/page": "/signin",
   "/signup/page": "/signup",
   "/test/page": "/test",
   "/techDashboard/page": "/techDashboard"

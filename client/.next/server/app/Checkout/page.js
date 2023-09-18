@@ -265,11 +265,11 @@ const routeModule = new AppPageRouteModule({
 /***/ 54309:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 31396))
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 88545))
 
 /***/ }),
 
-/***/ 31396:
+/***/ 88545:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -476,7 +476,7 @@ function AddressForm() {
     });
 }
 
-;// CONCATENATED MODULE: ./src/component/PaymenForm.jsx
+;// CONCATENATED MODULE: ./src/component/PaymentForm.jsx
 /* __next_internal_client_entry_do_not_use__ default auto */ 
 
 
@@ -490,78 +490,24 @@ function PaymentForm() {
             /*#__PURE__*/ jsx_runtime_.jsx((Typography_default()), {
                 variant: "h6",
                 gutterBottom: true,
-                children: "Payment method"
+                children: "Describe service issue"
             }),
-            /*#__PURE__*/ (0,jsx_runtime_.jsxs)((Grid_default()), {
+            /*#__PURE__*/ jsx_runtime_.jsx((Grid_default()), {
                 container: true,
                 spacing: 3,
-                children: [
-                    /*#__PURE__*/ jsx_runtime_.jsx((Grid_default()), {
-                        item: true,
-                        xs: 12,
-                        md: 6,
-                        children: /*#__PURE__*/ jsx_runtime_.jsx((TextField_default()), {
-                            required: true,
-                            id: "cardName",
-                            label: "Name on card",
-                            fullWidth: true,
-                            autoComplete: "cc-name",
-                            variant: "standard"
-                        })
-                    }),
-                    /*#__PURE__*/ jsx_runtime_.jsx((Grid_default()), {
-                        item: true,
-                        xs: 12,
-                        md: 6,
-                        children: /*#__PURE__*/ jsx_runtime_.jsx((TextField_default()), {
-                            required: true,
-                            id: "cardNumber",
-                            label: "Card number",
-                            fullWidth: true,
-                            autoComplete: "cc-number",
-                            variant: "standard"
-                        })
-                    }),
-                    /*#__PURE__*/ jsx_runtime_.jsx((Grid_default()), {
-                        item: true,
-                        xs: 12,
-                        md: 6,
-                        children: /*#__PURE__*/ jsx_runtime_.jsx((TextField_default()), {
-                            required: true,
-                            id: "expDate",
-                            label: "Expiry date",
-                            fullWidth: true,
-                            autoComplete: "cc-exp",
-                            variant: "standard"
-                        })
-                    }),
-                    /*#__PURE__*/ jsx_runtime_.jsx((Grid_default()), {
-                        item: true,
-                        xs: 12,
-                        md: 6,
-                        children: /*#__PURE__*/ jsx_runtime_.jsx((TextField_default()), {
-                            required: true,
-                            id: "cvv",
-                            label: "CVV",
-                            helperText: "Last three digits on signature strip",
-                            fullWidth: true,
-                            autoComplete: "cc-csc",
-                            variant: "standard"
-                        })
-                    }),
-                    /*#__PURE__*/ jsx_runtime_.jsx((Grid_default()), {
-                        item: true,
-                        xs: 12,
-                        children: /*#__PURE__*/ jsx_runtime_.jsx((FormControlLabel_default()), {
-                            control: /*#__PURE__*/ jsx_runtime_.jsx((Checkbox_default()), {
-                                color: "secondary",
-                                name: "saveCard",
-                                value: "yes"
-                            }),
-                            label: "Remember credit card details for next time"
-                        })
+                children: /*#__PURE__*/ jsx_runtime_.jsx((Grid_default()), {
+                    item: true,
+                    xs: 12,
+                    md: 6,
+                    children: /*#__PURE__*/ jsx_runtime_.jsx((TextField_default()), {
+                        required: true,
+                        id: "Describe issue",
+                        label: "Type here",
+                        fullWidth: true,
+                        autoComplete: "cc-number",
+                        variant: "standard"
                     })
-                ]
+                })
             })
         ]
     });
@@ -962,7 +908,7 @@ const __default__ = proxy.default;
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [587,309,256,368,998,617,413,930], () => (__webpack_exec__(69152)));
+var __webpack_exports__ = __webpack_require__.X(0, [587,309,286,368,617,413,68], () => (__webpack_exec__(69152)));
 module.exports = __webpack_exports__;
 
 })();
