@@ -30,6 +30,8 @@
     "styled-components": "^5.3.11"
   },
   "devDependencies": {
-    "eslint": "^8.49.0"
+    "@types/node": "^20.6.2",
+    "eslint": "^8.49.0",
+    "typescript": "^5.2.2"
   }
 }
