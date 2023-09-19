@@ -49,12 +49,12 @@ const typeDefs = gql`
     }
 
     type Mutation {
-        signIn(
+        addUser(
             email: String!,
-            password: String!
+            password: String!,
+            name: String!
             ): Auth
-        signUp(
-            name: String!,
+        login(
             email: String!,
             password: String!
             ): Auth
