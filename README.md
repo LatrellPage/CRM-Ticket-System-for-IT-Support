@@ -71,7 +71,7 @@ To learn more about Next.js, take a look at the following resources:
 ## Deployed Application
 
 You can view the live application
-[here]
+https://tech-triage-e262732e2664.herokuapp.com/
 
 ## Contributing
 
