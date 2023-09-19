@@ -36,23 +36,29 @@ const resolvers = {
   },
 
   Mutation:{
-    signIn: async (_, body) => {
-      const user = await User.findOne({ email: body.email });
-      const correctPw = await user.isCorrectPassword(body.password);
-      if (!correctPw) {
-        return res.status(400).json({ message: 'Wrong password!' });
-      }
-      const token = signToken(user);
-      return {user,token};
-    },
-
-    signUp: async (parent, args) => {
+    addUser: async (parent, args) => {
       const user = await User.create(args);
       const token = signToken(user);
 
-      return { token, user };
+      return {token, user}
     },
+    login: async (parent, { email, password }) => {
+      const user = await User.findOne({ email });
 
+      if (!user) {
+        throw AuthenticationError;
+      }
+
+      const correctPw = await user.isCorrectPassword(password);
+
+      if (!correctPw) {
+        throw AuthenticationError
+      }
+
+      const token = signToken(user);
+
+      return { token, user }
+    },
     createTicket: async (parent, args, { user}) => {
       if (user.role != "admin") {
         throw new Error("You must be an admin to assign tickets")
